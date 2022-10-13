@@ -3,9 +3,9 @@
 /**
  * main - Entry point
  *
- * Descrition: Print a string with prinf
+ * Descrition: 'Print a string with prinf'
  *
- * Return: Always 0(Success)
+ * Return: Always 0 (Success)
  *
  */
 
