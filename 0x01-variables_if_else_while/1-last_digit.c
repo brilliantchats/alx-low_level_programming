@@ -36,4 +36,6 @@ int main(void)
 	{
 		printf("Last digit of %d is %d and is zero", n, last);
 	}
+
+	return (0);
 }
