@@ -2,7 +2,7 @@
 
 /**
  * main - Entry Point
- * 
+ *
  * Description: Print all possible combinations of single digits in ascending order
  *
  * Return: (0)Success
