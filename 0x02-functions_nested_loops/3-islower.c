@@ -2,6 +2,7 @@
 
 /**
  * _islower - Entry Point
+ * @parameterc: Character to be checked if its lowercase
  *
  * Description: Check whether input is a lowercase
  *
@@ -10,7 +11,6 @@
  */
 int _islower(int c)
 {
-	/* c is ASCII value passed*/
 	int i = c;
 	int j;
 
