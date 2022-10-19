@@ -1,20 +1,13 @@
 #include "main.h"
 
 /**
- * main - Entry Point
+ * print_alphabet - Function
  *
  * Description: Print alphabet in lowercase without stdlib
  *
  * Return: 0(Success)
  *
  */
-int main(void)
-{
-	print_alphabet();
-	_putchar('\n');
-	return (0);
-}
-
 void print_alphabet(void)
 {
 	char c;
@@ -23,6 +16,7 @@ void print_alphabet(void)
 	{
 		_putchar(c);
 	}
-
+	
+	_putchar('\n');
 	return;
 }
