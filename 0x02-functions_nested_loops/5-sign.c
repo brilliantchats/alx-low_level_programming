@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_sign: Print sign of a number
+ * print_sign - Print sign of a number
  * @n: number to be checked
  *
  * Description: Print sign of parameter number passed
@@ -19,7 +19,7 @@ int print_sign(int n)
 	{
 		_putchar('0');
 		return (0);
-	} else
+	} else if (n < 0)
 	{
 		_putchar('-');
 		return (-1);
