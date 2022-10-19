@@ -2,7 +2,7 @@
 
 /**
  * _islower - Entry Point
- * @parameterc: Character to be checked if its lowercase
+ * @parameterc: c is lowercase?
  *
  * Description: Check whether input is a lowercase
  *
