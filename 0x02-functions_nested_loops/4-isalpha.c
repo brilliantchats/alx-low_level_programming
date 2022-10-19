@@ -23,7 +23,7 @@ int _isalpha(int c)
 
 	for (j = 97; j <= 122; j++)
 	{
-		if ( c == j)
+		if (c == j)
 		{
 			return (1);
 		}
