@@ -10,7 +10,7 @@
  */
 int _islower(int c)
 {
-	// c is ASCII value passed
+	/* c is ASCII value passed*/
 	int i = c;
 	int j;
 
