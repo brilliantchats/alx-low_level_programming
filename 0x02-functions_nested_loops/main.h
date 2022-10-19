@@ -1,5 +1,5 @@
-#ifndef HEADER-FILE
-#define HEADER_FILE
+#ifndef main.h
+#define main.h
 
 int _putchar(char c);
 
