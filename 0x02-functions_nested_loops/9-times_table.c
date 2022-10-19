@@ -26,7 +26,6 @@ void times_table(void)
 				{
 					_putchar((i * j) + '0');
 				}
-				_putchar('$');
 				_putchar('\n');
 			} else
 			{
