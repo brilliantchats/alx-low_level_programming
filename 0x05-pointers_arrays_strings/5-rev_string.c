@@ -14,7 +14,7 @@ void rev_string(char *s)
 	int i, j, k;
 	int str_len = 0;
 	char tmp[98];
-	char *tmp = tmp;
+	char *tmp_ptr = tmp;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
@@ -24,14 +24,14 @@ void rev_string(char *s)
 	{
 		if (j < 0)
 		{
-			*tmp = '\0';
+			*tmp_ptr = '\0';
 			break;
 		}
-		*tmp = *(s + j);
-		tmp++;
+		*tmp_ptr = *(s + j);
+		tmp_ptr++;
 	}
 	for (k = 0; k < str_len; k++)
 	{
-		*(s + k) = *(tmp + k);
+		*(s + k) = *(tmp_ptr + k);
 	}
 }
