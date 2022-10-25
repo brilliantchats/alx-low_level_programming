@@ -14,22 +14,24 @@ void rev_string(char *s)
 	int i, j, k;
 	int str_len = 0;
 	char tmp[98];
+	char *tmp = tmp;
 
-	for (i = 0; *(s + 1) != '\0'; i++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		str_len++;
 	}
-
-	for (j = 0; j < str_len; j++)
+	for (j = str_len - 1; j >= -1; j--)
 	{
-		tmp[j] = *(s + (str_len - j - 1));
-		if (j == str_len - 1)
+		if (j < 0)
 		{
-			tmp[str_len] = '\0';
+			*tmp = '\0';
+			break;
 		}
+		*tmp = *(s + j);
+		tmp++;
 	}
 	for (k = 0; k < str_len; k++)
 	{
-		*(s + k) = tmp[k];
+		*(s + k) = *(tmp + k);
 	}
 }
