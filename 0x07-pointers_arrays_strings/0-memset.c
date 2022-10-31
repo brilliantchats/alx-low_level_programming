@@ -6,12 +6,12 @@
  * @b: The byte to fill up the string
  * @n: The number of byte to be printed with b
  *
- * Return: s (Pointer to the string)
+ * Return: *s (Pointer to the string)
  *
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < n; i++)
 	{
