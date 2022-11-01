@@ -19,14 +19,14 @@ void print_diagsums(int *a, int size)
 	{
 		for (j = 0; j < size; j++)
 		{
-			sum_f += a[i + j][j];
+			sum_f = sum_f + a[i + j][j];
 		}
 	}
 	for (k = size - 1; k >= size - 1; k--)
 	{
 		for (m = 0; m < size; m++)
 		{
-			sum_b += a[k - m][m];
+			sum_b = sum_b + a[k - m][m];
 		}
 	}
 	printf("%d, %d", sum_f, sum_b);
