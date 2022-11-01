@@ -9,14 +9,5 @@
  */
 void set_string(char **s, char *to)
 {
-	int i, j, len;
-
-	for (i = 0; to[i] != '\0'; i++)
-	{
-		len++;
-	}
-	for (j = 0; j <= len; j++)
-	{
-		s[j] = to[j];
-	}
+	*s = to;
 }
