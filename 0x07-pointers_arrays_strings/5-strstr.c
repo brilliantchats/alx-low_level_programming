@@ -10,7 +10,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, k, pointer, found;
+	int i, j, k, found;
 
 	found = 0;
 
@@ -29,7 +29,6 @@ char *_strstr(char *haystack, char *needle)
 				}
 				if (found)
 				{
-					pointer = i;
 					return (haystack + i);
 				}
 			}
