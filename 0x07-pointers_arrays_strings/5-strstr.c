@@ -5,7 +5,7 @@
  * @haystack: the string
  * @needle: the substring to search for
  *
- * Return:pointer to the first char of the found substrng or null
+ * Return: pointer to the first char of the found substrng or null
  *
  */
 char *_strstr(char *haystack, char *needle)
@@ -36,5 +36,6 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 	}
+
 	return ('\0');
 }
