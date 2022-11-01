@@ -17,6 +17,6 @@ void set_string(char **s, char *to)
 	}
 	for (j = 0; j <= len; j++)
 	{
-		*s[j] = to[j];
+		s[j] = to[j];
 	}
 }
