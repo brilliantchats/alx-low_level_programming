@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * strlen - length of a string
+ * _strlen - length of a string
  * @s: string
  *
  * Return: length
  */
-int strlen(char *s)
+int _strlen(char *s)
 {
 	if (*s == '\0')
 		return (0);
@@ -41,7 +41,7 @@ int is_palindrome(char *s)
 {
 	int len, i = 0;
 
-	len = strlen(s) - 1;
+	len = _strlen(s) - 1;
 
 	return (palindrome(i, len, s));
 }
