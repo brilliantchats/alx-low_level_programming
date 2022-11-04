@@ -11,7 +11,7 @@
  */
 int check_str(char *s)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	for (i = 0; i < strlen(s); i++)
