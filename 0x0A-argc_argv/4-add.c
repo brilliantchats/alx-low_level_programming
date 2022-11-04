@@ -2,6 +2,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
+/**
+ * check_str - Check a str for int
+ * @s: the string
+ *
+ * Return: 1(Success) 0(Fail)
+ */
+int check_str(char *s)
+{
+	int i;
+
+	i = 0;
+	for (i = 0; i < strlen(s); i++)
+	{
+		if (!isdigit(s[i]))
+			return (0);
+	}
+	return (1);
+}
 /**
  * main - Add arguments
  * @argc: argument counter
@@ -21,11 +40,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (argv[i][0] == "-")
-			{
-				continue;
-			}
-			else if (!(isdigit(argv[i])))
+			if (check_str(argv[i]))
 			{
 				printf("Error\n");
 				return (1);
