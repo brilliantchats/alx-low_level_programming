@@ -53,19 +53,18 @@ int divide(int n)
  */
 int main(int argc, char *argv[])
 {
-	int cents;
+	char *s = argv[1];
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (atoi(argv[1]) < 0)
+	else if (s[i] == "-")
 		printf("0\n");
 	else
 	{
-		cents = divide(atoi(argv[1]));
-		printf("%d\n", cents)
+		printf("%d\n", divide(atoi(s)));
 	}
 	return (0);
 }
