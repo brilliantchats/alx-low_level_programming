@@ -13,7 +13,6 @@ int check_str(char *s)
 {
 	unsigned int i;
 
-	i = 0;
 	for (i = 0; i < strlen(s); i++)
 	{
 		if (!isdigit(s[i]))
@@ -40,7 +39,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (check_str(argv[i]))
+			if (!check_str(argv[i]))
 			{
 				printf("Error\n");
 				return (1);
