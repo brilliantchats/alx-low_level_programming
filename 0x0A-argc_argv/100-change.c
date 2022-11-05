@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 /**
  * divide - divide given number till you get coins
  * @n: number
@@ -41,8 +43,9 @@ int divide(int n)
 			n = n - 1;
 		}
 		else
-			return (count);
+			break;
 	}
+	return (count);
 }
 /**
  * main - Entry Point
@@ -58,7 +61,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (argv[1][i] == "-")
+	else if (!isdigit(argv[1][0]))
 		printf("0\n");
 	else
 	{
