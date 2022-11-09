@@ -10,11 +10,12 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, len_1, len_2;
+	int i, j, len_1, len_2;
 	char *array;
 
 	len_1 = 0;
 	len_2 = 0;
+	j = 0;
 
 	if (s1 == NULL)
 		len_1 = 0;
@@ -26,12 +27,20 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		len_2 = 0;
 	else
-		for (i = 0; s2[i] != '\0'; i++)
+	{
+		for (i = 0; s[i] != '\0'; i++)
 			len_2++;
+	}
 	array = malloc(len_1 + len_2 + 1);
-	for (i = 0; i < len_1; i++)
-		array[i] = s1[i];
-	for (i = 0; i <= len_2; i++)
-		array[i] = s2[i];
+	if (array != NULL)
+	{
+		for (i = 0; i < len_1; i++)
+			array[i] = s1[i];
+		for (i = len_1; i <= len_2 + len_1; i++)
+		{
+			array[i] = s2[j];
+			j++;
+		}
+	}
 	return (array);
 }
