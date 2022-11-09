@@ -16,7 +16,6 @@ char *str_concat(char *s1, char *s2)
 	len_1 = 0;
 	len_2 = 0;
 	j = 0;
-
 	if (s1 == NULL)
 		len_1 = 0;
 	else
@@ -35,10 +34,16 @@ char *str_concat(char *s1, char *s2)
 	if (array != NULL)
 	{
 		for (i = 0; i < len_1; i++)
-			array[i] = s1[i];
+		{
+			if (s1 != NULL)
+				array[i] = s1[i];
+		}
 		for (i = len_1; i <= len_2 + len_1; i++)
 		{
-			array[i] = s2[j];
+			if (s2 == NULL)
+				array[i] = '\0';
+			else
+				array[i] = s2[j];
 			j++;
 		}
 	}
