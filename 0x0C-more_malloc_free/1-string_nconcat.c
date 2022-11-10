@@ -10,7 +10,7 @@
 unsigned int str_len(char *s)
 {
 	unsigned int len, i;
-	
+
 	len = 0;
 	if (s != NULL)
 	{
