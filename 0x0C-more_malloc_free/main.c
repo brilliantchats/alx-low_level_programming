@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "1-string_nconcat.c"
 /**
  * main - check the code
  * 
