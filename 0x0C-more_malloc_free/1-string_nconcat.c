@@ -25,16 +25,16 @@ unsigned int str_len(char *s)
  * @s2: second string
  * @n: copy s2 up till n
  *
- * Retrun: pointer to new string or NULL if fails
+ * Return: pointer to new string or NULL if fails
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, len1, len2, loop2;
 	char *new_str;
 
+	j = 0;
 	len1 = str_len(s1);
 	len2 = str_len(s2);
-	j = 0;
 	if (n < len2)
 		new_str = malloc(sizeof(char) * (len1 + n + 1));
 	else
@@ -54,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			loop2 = len2 + 1;
 		for (i = len1; i < loop2 + len1; i++)
 		{
-			if (i == loop2 + len1 - 1)
+			if (i == (loop2 + len1 - 1))
 				new_str[i] = '\0';
 			else
 				new_str[i] = s2[j];
