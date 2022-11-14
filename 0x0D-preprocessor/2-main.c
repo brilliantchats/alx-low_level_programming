@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Prints out the name of the file 
+ * main - Prints out the name of the file
  *
  * Return: nothing
  */
