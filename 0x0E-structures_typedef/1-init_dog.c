@@ -9,6 +9,8 @@
  * @owner: the owner
  *
  * Description: initialise struct dog passed to the function
+ *
+ * Return: nothing
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
