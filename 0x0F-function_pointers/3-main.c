@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int result;
-	
+
 	char *op = argv[2];
 	char *add = "+";
 	char *sub = "-";
@@ -22,17 +22,18 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error1\n");
+		printf("Error\n");
 		exit(98);
 	}
-	if (strcmp(op, add) && strcmp(op, sub) && strcmp(op, mul) && strcmp(op, div) && strcmp(op, mod))
+	if (strcmp(op, add) && strcmp(op, sub) && strcmp(op, mul) &&
+	strcmp(op, div) && strcmp(op, mod))
 	{
-		printf("Error2\n");
+		printf("Error\n");
 		exit(99);
 	}
 	if ((!strcmp(op, div) || strcmp(op, mod)) && atoi(argv[3]) == 0)
 	{
-		printf("Error3\n");
+		printf("Error\n");
 		exit(100);
 	}
 	result = get_op_func(op)(atoi(argv[1]), atoi(argv[3]));
