@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * get_op_func - Gets the function to use depending on operator
  * @s: the string containing the operator
@@ -9,7 +10,7 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	int i;
+	int i = 0;
 
 	op_t ops[] = {
 		{"+", op_add},
@@ -19,12 +20,13 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-
-	i = 0;
 	while (i < 6)
 	{
-		if (ops[i].op == s && ops[i].op != NULL)
+		if (!strcmp(ops[i].op, s) && s != NULL)
+		{
 			return (ops[i].f);
+		}
+		i++;
 	}
 	return (NULL);
 }

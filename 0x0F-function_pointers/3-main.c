@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - Perfoms a simple operation depending on type of func
  * @argc: total number of arguments passed
@@ -24,17 +25,17 @@ int main(int argc, char *argv[])
 		printf("Error1\n");
 		exit(98);
 	}
-	if (op != add && op != sub && op != mul && op != div && op != mod)
+	if (strcmp(op, add) && strcmp(op, sub) && strcmp(op, mul) && strcmp(op, div) && strcmp(op, mod))
 	{
 		printf("Error2\n");
 		exit(99);
 	}
-	if ((op == div || op == mod) && atoi(argv[3]) == 0)
+	if ((!strcmp(op, div) || strcmp(op, mod)) && atoi(argv[3]) == 0)
 	{
 		printf("Error3\n");
 		exit(100);
 	}
-	result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
+	result = get_op_func(op)(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", result);
 	return (0);
 }
