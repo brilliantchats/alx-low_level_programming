@@ -10,7 +10,7 @@
  */
 size_t listint_len(const listint_t *h)
 {
-	const listint_t current;
+	const listint_t *current;
 	int length = 0;
 
 	if (h == NULL)
