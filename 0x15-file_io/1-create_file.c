@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strlen - Length of a string
+ * str_len - Length of a string
  * @str: the string
  *
  * Return: the length of the string
  */
-size_t _strlen(char *str)
+size_t str_len(char *str)
 {
 	size_t len = 0;
 	int i;
@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content == NULL)
 		return (1);
-	length = _strlen(text_content);
+	length = str_len(text_content);
 	written = write(fd, text_content, length);
 	if (written == -1)
 		return (-1);
